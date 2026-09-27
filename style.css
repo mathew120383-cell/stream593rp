@@ -43,3 +43,5 @@ body.modal-open{overflow:hidden}
   .product-modal-image-wrap{min-height:240px}
   .product-modal-info h2{font-size:22px}
 }
+
+.product-card{cursor:pointer}.product-card:focus{outline:2px solid rgba(255,255,255,.35);outline-offset:3px}.old-price{text-decoration:line-through;opacity:.45;margin-right:8px}

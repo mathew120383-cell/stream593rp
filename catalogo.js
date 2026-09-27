@@ -298,3 +298,4 @@ const CATALOGO = [
     "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
   }
 ];
+window.CATALOGO = CATALOGO;

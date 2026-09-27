@@ -6,7 +6,16 @@ const menu=document.querySelector(".menu-toggle"),nav=document.getElementById("n
 if(menu && nav){menu.addEventListener("click",()=>nav.classList.toggle("open"));nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));}
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
 function card(item){
- return `<article class="market-card"><img class="market-image" src="${esc(item.imagen)}" alt="${esc(item.nombre)}" loading="lazy"><div class="market-body"><span class="market-category">${esc(item.categoria)}</span><h3>${esc(item.nombre)}</h3><p class="market-meta">${esc(item.meta)}</p><div class="market-bottom"><strong>${esc(item.precio)}</strong><span>STREAM593 RP</span></div><p class="market-description">${esc(item.descripcion)}</p></div></article>`;
+ return `<article class="market-card product-card" data-product-id="${esc(item.id)}" tabindex="0" role="button" aria-label="Ver ${esc(item.nombre)}">
+   <img class="market-image" src="${esc(item.imagen)}" alt="${esc(item.nombre)}" loading="lazy">
+   <div class="market-body">
+     <span class="market-category">${esc(item.categoria)}</span>
+     <h3>${esc(item.nombre)}</h3>
+     <p class="market-meta">${esc(item.meta)}</p>
+     <div class="market-bottom"><strong>${item.precioAnterior ? `<span class="old-price">${esc(item.precioAnterior)}</span>` : ""}${esc(item.precio)}</strong><span>VER DETALLES →</span></div>
+     <p class="market-description">${esc(item.descripcion)}</p>
+   </div>
+ </article>`;
 }
 function render(){
  const groups={vehiculos:"vehiclesGrid",casas:"housesGrid","armas-vip":"weaponsGrid"};
@@ -52,7 +61,7 @@ document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",(
         </div>`;
       document.body.appendChild(modal);
       modal.addEventListener("click",e=>{
-        if(e.target.matches("[data-close-modal]")) closeProduct();
+        if(e.target.closest("[data-close-modal]")) closeProduct();
       });
       document.addEventListener("keydown",e=>{
         if(e.key==="Escape") closeProduct();
@@ -62,18 +71,17 @@ document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",(
     document.getElementById("modalProductImage").src=item.imagen;
     document.getElementById("modalProductImage").alt=item.nombre;
     document.getElementById("modalProductName").textContent=item.nombre;
-    document.getElementById("modalProductCategory").textContent=
+    document.getElementById("modalProductCategory").textContent =
       item.categoria==="vehiculos" ? "VEHÍCULO" :
       item.categoria==="casas" ? "PROPIEDAD" : "ARMA VIP";
 
-    const price = document.getElementById("modalProductPrice");
-    price.innerHTML = item.precioAnterior
-      ? `<span class="old-price">${escapeHTML(item.precioAnterior)}</span><strong>${escapeHTML(item.precio)}</strong>`
-      : `<strong>${escapeHTML(item.precio)}</strong>`;
+    document.getElementById("modalProductPrice").innerHTML =
+      item.precioAnterior
+        ? `<span class="old-price">${escapeHTML(item.precioAnterior)}</span><strong>${escapeHTML(item.precio)}</strong>`
+        : `<strong>${escapeHTML(item.precio)}</strong>`;
 
     document.getElementById("modalProductMeta").textContent=item.meta || "Disponible";
     document.getElementById("modalProductDescription").textContent=item.descripcion || "";
-
     modal.classList.add("open");
     document.body.classList.add("modal-open");
   }
@@ -84,39 +92,20 @@ document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",(
     document.body.classList.remove("modal-open");
   }
 
-  function attachProductClicks(){
+  function bindCards(){
     document.querySelectorAll(".product-card").forEach(card=>{
       if(card.dataset.detailBound) return;
       card.dataset.detailBound="1";
-      card.style.cursor="pointer";
-      card.addEventListener("click",e=>{
-        if(e.target.closest("a,button")) return;
-        const id=card.dataset.productId;
-        const item=(window.CATALOGO || []).find(x=>x.id===id);
+      const go=()=>{
+        const item=(window.CATALOGO||[]).find(x=>x.id===card.dataset.productId);
         if(item) openProduct(item);
+      };
+      card.addEventListener("click",go);
+      card.addEventListener("keydown",e=>{
+        if(e.key==="Enter" || e.key===" ") { e.preventDefault(); go(); }
       });
     });
   }
 
-  // Make the existing renderer expose the product id to each card.
-  const oldRender=window.render;
-  if(typeof oldRender==="function"){
-    const original=oldRender;
-    window.render=function(){
-      original();
-      document.querySelectorAll(".product-card").forEach((card,i)=>{
-        const grid=card.closest("[id]");
-        const cat=grid?.id==="vehiclesGrid"?"vehiculos":grid?.id==="housesGrid"?"casas":"armas-vip";
-        const items=(window.CATALOGO||[]).filter(x=>x.categoria===cat);
-        if(items[i]) card.dataset.productId=items[i].id;
-      });
-      attachProductClicks();
-    };
-    window.render();
-  } else {
-    setTimeout(attachProductClicks,300);
-  }
-
-  // Fallback: observe dynamically rendered cards.
-  new MutationObserver(attachProductClicks).observe(document.body,{childList:true,subtree:true});
+  bindCards();
 })();
