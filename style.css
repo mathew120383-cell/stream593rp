@@ -14,3 +14,32 @@
 footer{border-top:1px solid var(--line);padding:35px clamp(20px,5vw,80px);display:flex;align-items:center;justify-content:space-between;gap:20px;color:#777;font-size:11px}.footer-brand img{width:85px;height:55px;object-fit:contain}footer a{color:#aaa;font-weight:700}.toast{position:fixed;right:25px;bottom:25px;background:#fff;color:#080808;padding:12px 17px;border-radius:8px;font-size:12px;font-weight:700;transform:translateY(100px);opacity:0;transition:.3s;z-index:30}.toast.show{transform:translateY(0);opacity:1}
 @media(max-width:900px){nav{display:none;position:absolute;top:82px;left:0;right:0;background:rgba(7,7,7,.96);padding:20px;flex-direction:column;gap:18px;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu-toggle{display:block}.cards{grid-template-columns:1fr 1fr}.market-grid{grid-template-columns:1fr 1fr}.update-grid{grid-template-columns:1fr}.discord-inner{flex-direction:column;align-items:flex-start}}
 @media(max-width:520px){.cards,.market-grid{grid-template-columns:1fr}.hero{padding-top:105px}.hero-logo{height:145px}.connect-box{max-width:100%;font-size:9px}.section{padding:80px 20px}.market-image{height:220px}}
+
+
+/* ===== FICHA / COMPARADOR STREAM593 RP ===== */
+body.modal-open{overflow:hidden}
+.product-modal{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:24px}
+.product-modal.open{display:flex}
+.product-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(8px)}
+.product-modal-card{position:relative;z-index:1;width:min(1000px,96vw);max-height:90vh;overflow:auto;display:grid;grid-template-columns:minmax(320px,1fr) minmax(300px,1fr);gap:28px;padding:28px;border:1px solid rgba(255,255,255,.14);border-radius:24px;background:rgba(12,12,18,.96);box-shadow:0 0 45px rgba(0,0,0,.6)}
+.product-modal-close{position:absolute;right:16px;top:12px;width:42px;height:42px;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:30px;cursor:pointer;z-index:2}
+.product-modal-image-wrap{min-height:360px;display:flex;align-items:center;justify-content:center;border-radius:18px;background:rgba(255,255,255,.035);overflow:hidden}
+.product-modal-image-wrap img{width:100%;height:100%;max-height:560px;object-fit:contain}
+.product-modal-info{padding:18px 10px 10px}
+.product-modal-category{font-size:12px;letter-spacing:2px;opacity:.65}
+.product-modal-info h2{font-size:28px;line-height:1.15;margin:10px 0 18px}
+.product-modal-price{font-size:30px;margin-bottom:14px}
+.product-modal-price strong{font-size:34px}
+.product-modal-price .old-price{font-size:20px;text-decoration:line-through;opacity:.45;margin-right:12px}
+.product-modal-meta{display:inline-block;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.07);font-size:13px;margin-bottom:18px}
+.product-modal-info p{line-height:1.65;opacity:.78}
+.product-modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.modal-buy,.modal-back{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 17px;border-radius:12px;border:1px solid rgba(255,255,255,.15);font-weight:700;text-decoration:none;cursor:pointer}
+.modal-buy{background:#fff;color:#111}
+.modal-back{background:rgba(255,255,255,.06);color:#fff}
+@media(max-width:760px){
+  .product-modal{padding:10px}
+  .product-modal-card{grid-template-columns:1fr;padding:18px;gap:8px;max-height:94vh}
+  .product-modal-image-wrap{min-height:240px}
+  .product-modal-info h2{font-size:22px}
+}
