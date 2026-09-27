@@ -1,39 +1,16 @@
-# STREAM593 RP — Web + Mercado
+STREAM593 RP — WEB MERCADO
+===========================
+Contenido:
+- Vehículos
+- Casas
+- Armas VIP
+- Negocios (sección preparada)
+- Discord y conexión CFX
 
-## Qué incluye
-- Inicio de STREAM593 RP.
-- Tarjetas clicables: Vehículos, Casas, Negocios y Otros.
-- Catálogo con filtros.
-- Páginas/secciones independientes por categoría.
-- Cada publicación puede tener foto, nombre, precio, información y descripción.
-- Discord y conexión FiveM configurados.
+IMPORTANTE:
+Los precios están como "PRECIO POR DEFINIR" porque todavía no fueron proporcionados.
+Las casas NO incluyen ubicación, según indicación.
+Para publicar nuevos artículos, edita catalogo.js y coloca las imágenes en assets/catalogo/.
 
-## Cómo agregar fotos y publicaciones
-
-La web está en GitHub Pages, por lo que una foto no puede quedar guardada permanentemente desde un formulario del navegador sin un backend.
-La forma segura y gratuita es:
-
-1. Sube las fotos a `assets/catalogo/` en GitHub.
-2. Abre `catalogo.js`.
-3. Agrega una publicación como esta:
-
-{
-  id: "bmw-m4",
-  categoria: "vehiculos",
-  nombre: "BMW M4",
-  precio: "$85.000",
-  meta: "2026 · Disponible",
-  imagen: "assets/catalogo/bmw-m4.jpg",
-  descripcion: "Vehículo deportivo, interior premium y excelente estado."
-}
-
-Categorías permitidas:
-- vehiculos
-- casas
-- negocios
-- otros
-
-4. Guarda/commit los cambios. GitHub Pages actualizará la web.
-
-## Importante
-La versión actual muestra publicaciones de ejemplo. Cambia sus datos antes de publicar el catálogo definitivo.
+GitHub Pages:
+Sube/reemplaza index.html, style.css, script.js, catalogo.js y la carpeta assets.
