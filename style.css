@@ -45,3 +45,8 @@ body.modal-open{overflow:hidden}
 }
 
 .product-card{cursor:pointer}.product-card:focus{outline:2px solid rgba(255,255,255,.35);outline-offset:3px}.old-price{text-decoration:line-through;opacity:.45;margin-right:8px}
+
+.guayaquil-v3-hero{position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center;justify-content:center;padding:0!important}
+.guayaquil-v3-art{display:block;width:100%;height:520px;object-fit:cover;object-position:center;position:relative;z-index:1}
+.guayaquil-v3-hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.18),transparent 35%,transparent 65%,rgba(0,0,0,.18))}
+@media(max-width:760px){.guayaquil-v3-hero{min-height:300px}.guayaquil-v3-art{height:300px}}
