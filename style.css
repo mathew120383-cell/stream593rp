@@ -16,7 +16,7 @@ footer{border-top:1px solid var(--line);padding:35px clamp(20px,5vw,80px);displa
 @media(max-width:520px){.cards,.market-grid{grid-template-columns:1fr}.hero{padding-top:105px}.hero-logo{height:145px}.connect-box{max-width:100%;font-size:9px}.section{padding:80px 20px}.market-image{height:220px}}
 
 
-/* ===== FICHA / COMPARADOR STREAM593 RP ===== */
+/* ===== FICHA / COMPARADOR GUAYAQUIL V3 ===== */
 body.modal-open{overflow:hidden}
 .product-modal{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:24px}
 .product-modal.open{display:flex}

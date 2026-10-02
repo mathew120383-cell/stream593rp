@@ -1,4 +1,4 @@
-STREAM593 RP — WEB MERCADO
+GUAYAQUIL V3 — WEB MERCADO
 ===========================
 Contenido:
 - Vehículos

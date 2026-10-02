@@ -28,7 +28,7 @@ render();
 document.querySelectorAll("[data-back]").forEach(b=>b.addEventListener("click",()=>location.hash="mercado"));
 
 
-/* ===== STREAM593 RP · FICHA DE PRODUCTO ===== */
+/* ===== GUAYAQUIL V3 · FICHA DE PRODUCTO ===== */
 (function(){
   function escapeHTML(v){
     return String(v ?? "").replace(/[&<>"']/g, c => ({

@@ -196,7 +196,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/mp5-varios-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-2",
@@ -205,7 +205,7 @@ const CATALOGO = [
     "precio": "$35.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/g18-varios-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-3",
@@ -214,7 +214,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/draco-varios-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-4",
@@ -223,7 +223,7 @@ const CATALOGO = [
     "precio": "$35.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/deagle-varios-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-5",
@@ -232,7 +232,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/cx9-smg-1-color.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-6",
@@ -241,7 +241,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/skeleton-arp-varios-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-7",
@@ -250,7 +250,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/mpx-1-color.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-8",
@@ -259,7 +259,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/aug-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-9",
@@ -268,7 +268,7 @@ const CATALOGO = [
     "precio": "$35.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/g26-todos-los-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-10",
@@ -277,7 +277,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/akv9-1-color.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-11",
@@ -286,7 +286,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/arp-varios-colores.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   },
   {
     "id": "arma-vip-12",
@@ -295,7 +295,7 @@ const CATALOGO = [
     "precio": "$50.000",
     "meta": "VIP · Contactar por Discord",
     "imagen": "assets/catalogo/rk-1-color.png",
-    "descripcion": "Arma VIP para STREAM593 RP. Precio y disponibilidad se actualizarán desde este catálogo."
+    "descripcion": "Arma VIP para GUAYAQUIL V3. Precio y disponibilidad se actualizarán desde este catálogo."
   }
 ];
 window.CATALOGO = CATALOGO;
